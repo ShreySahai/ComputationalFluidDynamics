@@ -23,7 +23,7 @@ To be updated soon
 
 To be updated soon
 
-![The solution for different Peclet number](/images/Example.png)
+![The solution for different Peclet number](/NeedForUpwindScheme_Visualisation//images/Example.png)
 
 
 
