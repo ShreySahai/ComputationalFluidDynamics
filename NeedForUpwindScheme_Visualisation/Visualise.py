@@ -43,15 +43,14 @@ def visulaise(peclet):
         axs[iterator].plot(x,T,label='fds')
         try:
             for i in range(n):
-                Texact[i]=(math.exp(pe*x[i])-1)/(math.exp(pe)-1)
+                Texact[i]=(math.exp(pe*x[i]/10)-1)/(math.exp(pe)-1)
             for i in range(n):
                 Texact[i]=Texact[i]/Texact[n-1]
             axs[iterator].plot(x,Texact,label='exact')
-            plt.text(0.98,0.95, "Pe"+pe, horizontalalignment='right', verticalalignment='top', transform=ax.transAxes)
         except:
             plt.xlim(80,99)
-            print("Peclet number two high for computer to calculate. ","Peclet number being ",pe)
+            print("Peclet number being ",pe)
         axs[iterator].legend()
     plt.show()
-peclet=np.array([0.01,0.4,2,10,30,50,70])
+peclet=np.array([0.01,10,20,50,100])
 visulaise(peclet)
